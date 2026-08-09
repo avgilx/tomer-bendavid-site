@@ -131,10 +131,13 @@ h1 { letter-spacing: -0.01em; }
 .hero .lead { font-size: clamp(16px, 2.4vw, 18px); color: var(--ink-soft); margin: 0 0 34px; max-width: 560px; }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 .hero-media img { border-radius: var(--radius); box-shadow: var(--shadow-lift); aspect-ratio: 4 / 3; object-fit: cover; width: 100%; }
+.hero-media-portrait img { aspect-ratio: 5 / 6; object-position: center 20%; }
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; padding: 44px 24px 52px; gap: 34px; }
   .hero-media { order: -1; }
   .hero-media img { aspect-ratio: 16 / 10; }
+  .hero-media-portrait { max-width: 380px; margin: 0 auto; }
+  .hero-media-portrait img { aspect-ratio: 5 / 6; }
 }
 
 /* Hero פנימי */
@@ -209,6 +212,15 @@ h1 { letter-spacing: -0.01em; }
 
 .page-figure { margin: 36px 0 0; }
 .page-figure img { border-radius: var(--radius); box-shadow: var(--shadow); width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.page-figure-portrait { max-width: 440px; margin-inline: auto; }
+.page-figure-portrait img { aspect-ratio: 4 / 5; }
+
+.figure-row { margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.figure-row figure { margin: 0; }
+.figure-row img { border-radius: var(--radius); box-shadow: var(--shadow); width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.figure-row figcaption { font-size: 14.5px; color: var(--ink-faint); margin-top: 8px; text-align: center; }
+.figure-row img.crop-top, .page-figure img.crop-top { object-position: center 20%; }
+@media (max-width: 620px) { .figure-row { grid-template-columns: 1fr; } }
 
 .group-list { margin-top: 34px; display: flex; flex-direction: column; gap: 18px; }
 .group {
