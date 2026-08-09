@@ -4,22 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>צור קשר — תומר בן דוד</title>
-  <meta name="description" content="יצירת קשר עם תומר בן דוד — קבוצות קונג פו, אימון אישי, ריטריטים, הכשרת מורים וסדנאות לארגונים.">
+  <meta name="description" content="יצירת קשר עם תומר בן דוד — טלפון, וואטסאפ, דוא״ל וטופס פנייה לאנשים פרטיים ולארגונים.">
   <link rel="canonical" href="https://tomerbendavid.co.il/contact.html">
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="תומר בן דוד">
   <meta property="og:title" content="צור קשר — תומר בן דוד">
-  <meta property="og:description" content="אשמח לשמוע מכם — נדבר על הדרך הטובה ביותר להתחיל יחד.">
-  <meta property="og:image" content="https://tomerbendavid.co.il/assets/img/hero-desert.jpg">
+  <meta property="og:description" content="יצירת קשר עם תומר בן דוד — טלפון, וואטסאפ, דוא״ל וטופס פנייה לאנשים פרטיים ולארגונים.">
+  <meta property="og:image" content="https://tomerbendavid.co.il/assets/img/kungfu-pagoda.jpg">
   <meta property="og:url" content="https://tomerbendavid.co.il/contact.html">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -27,19 +27,18 @@
 
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="index.html">
-        <img src="assets/img/logo.png" alt="">
+      <a class="brand" href="index.html" aria-label="תומר בן דוד — לעמוד הבית">
+        <img src="assets/img/mark.png" alt="">
         <span class="brand-name">תומר בן דוד</span>
       </a>
       <button class="nav-toggle" aria-label="פתיחת תפריט" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <nav class="main-nav" aria-label="ניווט ראשי">
-        <a href="index.html">בית</a>
-        <a href="individuals.html">לאנשים</a>
-        <a href="organizations.html">לארגונים</a>
-        <a href="index.html#about">עלי</a>
-        <a href="contact.html" class="nav-cta active" aria-current="page">צור קשר</a>
+        <a href="individuals.html">לאנשים פרטיים</a>
+        <a href="organizations.html">לארגונים וצוותים</a>
+        <a href="about.html">תומר</a>
+        <a href="contact.html" class="nav-cta active">צור קשר</a>
       </nav>
     </div>
   </header>
@@ -49,7 +48,6 @@
     <section class="page-hero">
       <div class="container">
         <h1>צור קשר</h1>
-        <p class="tagline" id="contact-subtitle">אתקשר אליכם בהקדם ונדבר על הדרך הטובה ביותר להתחיל יחד.</p>
       </div>
     </section>
 
@@ -62,7 +60,6 @@
             <button class="form-tab" id="tab-org" role="tab" aria-selected="false" aria-controls="form-org">ארגונים וצוותים</button>
           </div>
 
-          <!-- טופס לאנשים -->
           <form id="form-individual" role="tabpanel" aria-labelledby="tab-individual" novalidate>
             <div class="field">
               <label for="ind-name">שם מלא *</label>
@@ -73,29 +70,28 @@
               <input type="tel" id="ind-phone" name="phone" autocomplete="tel" required>
             </div>
             <div class="field">
-              <label for="ind-email">דוא״ל</label>
+              <label for="ind-email">דוא״ל <span class="optional">(לא חובה)</span></label>
               <input type="email" id="ind-email" name="email" autocomplete="email">
             </div>
             <div class="field">
-              <label for="ind-interest">מה אתכם מעניין?</label>
+              <label for="ind-interest">נושא הפנייה</label>
               <select id="ind-interest" name="interest">
-                <option value="">בחרו נושא</option>
-                <option>קבוצות קונג פו</option>
+                <option value="">בחירת נושא</option>
                 <option>אימון אישי</option>
-                <option>ריטריטים וסדנאות</option>
+                <option>ריטריטים</option>
+                <option>לימודי קונג פו</option>
                 <option>הכשרת מורים ומנחים</option>
                 <option>אחר</option>
               </select>
             </div>
             <div class="field">
-              <label for="ind-message">הודעה</label>
-              <textarea id="ind-message" name="message" placeholder="ספרו לי מעט על עצמכם ומה אתם מחפשים"></textarea>
+              <label for="ind-message">הודעה <span class="optional">(לא חובה)</span></label>
+              <textarea id="ind-message" name="message"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">שליחה בוואטסאפ</button>
-            <p class="form-note">לחיצה על הכפתור תפתח וואטסאפ עם הפרטים שמילאתם — נשאר רק לשלוח. אפשר גם <a href="mailto:tomer@orin.co.il?subject=פנייה מהאתר">לשלוח מייל</a>.</p>
+            <button type="submit" class="btn btn-primary btn-block">שליחה בוואטסאפ</button>
+            <p class="form-note">הכפתור פותח וואטסאפ עם הפרטים שמילאתם. אפשר גם <a href="mailto:tomer@orin.co.il?subject=פנייה מהאתר">לשלוח מייל</a>.</p>
           </form>
 
-          <!-- טופס לארגונים -->
           <form id="form-org" role="tabpanel" aria-labelledby="tab-org" novalidate hidden>
             <div class="field">
               <label for="org-name">שם מלא *</label>
@@ -114,42 +110,34 @@
               <input type="tel" id="org-phone" name="phone" autocomplete="tel" required>
             </div>
             <div class="field">
-              <label for="org-email">דוא״ל</label>
+              <label for="org-email">דוא״ל <span class="optional">(לא חובה)</span></label>
               <input type="email" id="org-email" name="email" autocomplete="email">
             </div>
             <div class="field">
-              <label for="org-interest">מה אתכם מעניין?</label>
+              <label for="org-interest">נושא הפנייה</label>
               <select id="org-interest" name="interest">
-                <option value="">בחרו נושא</option>
-                <option>סדנה מותאמת</option>
+                <option value="">בחירת נושא</option>
+                <option>כשעסקים וקונג פו נפגשים</option>
                 <option>סדנת יין־יאנג</option>
-                <option>ליווי למנהלים</option>
+                <option>סדנאות בהתאמה אישית</option>
+                <option>ליווי אישי למנהלים</option>
                 <option>אחר</option>
               </select>
             </div>
             <div class="field">
-              <label for="org-message">הודעה</label>
-              <textarea id="org-message" name="message" placeholder="ספרו לנו על הארגון שלכם, היעדים שלכם והזמן שבו אתם חושבים על התחלת התהליך"></textarea>
+              <label for="org-message">הודעה <span class="optional">(לא חובה)</span></label>
+              <textarea id="org-message" name="message"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">שליחה בוואטסאפ</button>
-            <p class="form-note">לחיצה על הכפתור תפתח וואטסאפ עם הפרטים שמילאתם — נשאר רק לשלוח. אפשר גם <a href="mailto:tomer@orin.co.il?subject=פנייה מארגון">לשלוח מייל</a>.</p>
+            <button type="submit" class="btn btn-primary btn-block">שליחה בוואטסאפ</button>
+            <p class="form-note">הכפתור פותח וואטסאפ עם הפרטים שמילאתם. אפשר גם <a href="mailto:tomer@orin.co.il?subject=פנייה מארגון">לשלוח מייל</a>.</p>
           </form>
 
         </div>
 
-        <div class="contact-direct">
-          <a href="tel:+972527000030">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
-            052-700-0030
-          </a>
-          <a href="https://wa.me/972527000030" target="_blank" rel="noopener">
-            <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.004 3.2c-7.06 0-12.8 5.74-12.8 12.8 0 2.26.59 4.46 1.71 6.4L3.2 28.8l6.58-1.67a12.74 12.74 0 0 0 6.22 1.6h.01c7.06 0 12.79-5.74 12.79-12.8 0-3.42-1.33-6.63-3.75-9.05a12.72 12.72 0 0 0-9.05-3.68zm0 23.36h-.01a10.6 10.6 0 0 1-5.4-1.48l-.39-.23-4.02 1.02 1.07-3.92-.25-.4a10.55 10.55 0 0 1-1.63-5.65c0-5.87 4.78-10.64 10.65-10.64 2.84 0 5.51 1.11 7.52 3.12a10.57 10.57 0 0 1 3.11 7.53c0 5.87-4.78 10.65-10.65 10.65z"/></svg>
-            וואטסאפ
-          </a>
-          <a href="mailto:tomer@orin.co.il">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
-            tomer@orin.co.il
-          </a>
+        <div class="contact-methods contact-methods-inline">
+          <a href="tel:+972527000030"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg><span>052-700-0030</span></a>
+          <a href="https://wa.me/972527000030" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.004 3.2c-7.06 0-12.8 5.74-12.8 12.8 0 2.26.59 4.46 1.71 6.4L3.2 28.8l6.58-1.67a12.74 12.74 0 0 0 6.22 1.6h.01c7.06 0 12.79-5.74 12.79-12.8 0-3.42-1.33-6.63-3.75-9.05a12.72 12.72 0 0 0-9.05-3.68zm0 23.36h-.01a10.6 10.6 0 0 1-5.4-1.48l-.39-.23-4.02 1.02 1.07-3.92-.25-.4a10.55 10.55 0 0 1-1.63-5.65c0-5.87 4.78-10.64 10.65-10.64 2.84 0 5.51 1.11 7.52 3.12a10.57 10.57 0 0 1 3.11 7.53c0 5.87-4.78 10.65-10.65 10.65zm5.84-7.97c-.32-.16-1.89-.93-2.19-1.04-.29-.11-.5-.16-.72.16-.21.32-.82 1.04-1.01 1.25-.18.21-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.9-1.78-2.22-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.72-1.73-.98-2.37-.26-.62-.52-.54-.72-.55l-.61-.01c-.21 0-.56.08-.85.4-.29.32-1.12 1.09-1.12 2.66 0 1.57 1.14 3.08 1.3 3.3.16.21 2.25 3.43 5.45 4.81.76.33 1.36.53 1.82.67.77.24 1.46.21 2.01.13.61-.09 1.89-.77 2.15-1.52.27-.75.27-1.38.19-1.52-.08-.13-.29-.21-.61-.37z"/></svg><span>וואטסאפ</span></a>
+          <a href="mailto:tomer@orin.co.il"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg><span>tomer@orin.co.il</span></a>
         </div>
       </div>
     </section>
@@ -161,18 +149,27 @@
       <div class="footer-grid">
         <div>
           <div class="footer-brand">
-            <img src="assets/img/logo.png" alt="">
+            <img src="assets/img/mark.png" alt="">
             <span>תומר בן דוד</span>
           </div>
-          <p>מלווה אנשים וארגונים דרך תנועה, גוף ונפש — מעל 40 שנות תרגול בקונג פו, צ'י קונג ומדיטציה.</p>
+          <p>מלווה אנשים וארגונים דרך תנועה, גוף ונפש.</p>
         </div>
         <div>
-          <h4>ניווט</h4>
+          <h4>לאנשים פרטיים</h4>
           <ul>
-            <li><a href="index.html">בית</a></li>
-            <li><a href="individuals.html">לאנשים ומתרגלים</a></li>
-            <li><a href="organizations.html">לארגונים וצוותים</a></li>
-            <li><a href="contact.html">צור קשר</a></li>
+            <li><a href="personal-training.html">אימון אישי</a></li>
+            <li><a href="retreats.html">ריטריטים</a></li>
+            <li><a href="kung-fu.html">לימודי קונג פו</a></li>
+            <li><a href="teacher-training.html">הכשרת מורים ומנחים</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>לארגונים וצוותים</h4>
+          <ul>
+            <li><a href="kungfu-business.html">כשעסקים וקונג פו נפגשים</a></li>
+            <li><a href="yin-yang.html">סדנת יין־יאנג</a></li>
+            <li><a href="custom-workshops.html">סדנאות בהתאמה אישית</a></li>
+            <li><a href="executive-coaching.html">ליווי אישי למנהלים</a></li>
           </ul>
         </div>
         <div>
@@ -189,6 +186,10 @@
       <div class="footer-bottom">© 2026 תומר בן דוד · כל הזכויות שמורות</div>
     </div>
   </footer>
+
+  <a class="wa-float" href="https://wa.me/972527000030" target="_blank" rel="noopener" aria-label="שליחת הודעת וואטסאפ">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.004 3.2c-7.06 0-12.8 5.74-12.8 12.8 0 2.26.59 4.46 1.71 6.4L3.2 28.8l6.58-1.67a12.74 12.74 0 0 0 6.22 1.6h.01c7.06 0 12.79-5.74 12.79-12.8 0-3.42-1.33-6.63-3.75-9.05a12.72 12.72 0 0 0-9.05-3.68zm0 23.36h-.01a10.6 10.6 0 0 1-5.4-1.48l-.39-.23-4.02 1.02 1.07-3.92-.25-.4a10.55 10.55 0 0 1-1.63-5.65c0-5.87 4.78-10.64 10.65-10.64 2.84 0 5.51 1.11 7.52 3.12a10.57 10.57 0 0 1 3.11 7.53c0 5.87-4.78 10.65-10.65 10.65zm5.84-7.97c-.32-.16-1.89-.93-2.19-1.04-.29-.11-.5-.16-.72.16-.21.32-.82 1.04-1.01 1.25-.18.21-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.9-1.78-2.22-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.72-1.73-.98-2.37-.26-.62-.52-.54-.72-.55l-.61-.01c-.21 0-.56.08-.85.4-.29.32-1.12 1.09-1.12 2.66 0 1.57 1.14 3.08 1.3 3.3.16.21 2.25 3.43 5.45 4.81.76.33 1.36.53 1.82.67.77.24 1.46.21 2.01.13.61-.09 1.89-.77 2.15-1.52.27-.75.27-1.38.19-1.52-.08-.13-.29-.21-.61-.37z"/></svg>
+  </a>
 
   <script src="js/main.js"></script>
   <script src="js/contact.js"></script>
