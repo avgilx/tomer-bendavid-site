@@ -15,6 +15,8 @@
   --brown: #3d2f27;
   --brown-hover: #554236;
   --accent: #6b4d3f;
+  --green: #5d7a5a;
+  --green-soft: #edf1ec;
   --whatsapp: #25d366;
   --radius: 14px;
   --radius-sm: 9px;
@@ -175,9 +177,7 @@ h1 { letter-spacing: -0.01em; }
   display: block; padding: 12px 2px; font-size: 16px; color: var(--ink);
   position: relative; transition: color 0.15s, padding 0.15s;
 }
-.path-list a::after { content: "←"; position: absolute; left: 2px; color: var(--ink-faint); transition: transform 0.15s; }
-.path-list a:hover { color: var(--accent); padding-inline-start: 8px; }
-.path-list a:hover::after { transform: translateX(-3px); }
+.path-list a:hover { color: var(--green); padding-inline-start: 8px; }
 .path .btn { align-self: flex-start; margin-top: auto; }
 @media (max-width: 780px) { .paths-grid { grid-template-columns: 1fr; } }
 
@@ -205,9 +205,9 @@ h1 { letter-spacing: -0.01em; }
 .product:hover { color: var(--ink); border-color: var(--sand-3); box-shadow: var(--shadow-lift); transform: translateY(-2px); }
 .product h3 { font-size: 21px; margin-bottom: 10px; }
 .product p { color: var(--ink-soft); font-size: 16px; margin: 0 0 20px; flex: 1; }
-.product-link { color: var(--accent); font-weight: 500; font-size: 16px; }
-.product-link::after { content: " ←"; }
+.product-link { color: var(--green); font-weight: 600; font-size: 16px; }
 .product:hover .product-link { color: var(--brown); }
+.product { border-top: 3px solid var(--green); }
 
 /* ---------- תוכן דף מוצר ---------- */
 .prose p { color: var(--ink-soft); margin: 0 0 18px; }
@@ -229,7 +229,7 @@ h1 { letter-spacing: -0.01em; }
 .group-list { margin-top: 34px; display: flex; flex-direction: column; gap: 18px; }
 .group {
   background: var(--surface); border: 1px solid var(--line);
-  border-inline-start: 4px solid var(--accent);
+  border-inline-start: 4px solid var(--green);
   border-radius: var(--radius); padding: 24px 26px;
 }
 .group h3 { font-size: 19px; margin-bottom: 6px; }
@@ -343,3 +343,8 @@ h1 { letter-spacing: -0.01em; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .product, .path-list a { transition: none; }
 }
+
+/* ---------- הנעה לפעולה בראש עמוד מוצר ---------- */
+.hero-cta { margin-top: 20px; }
+.hero-cta .btn { padding: 11px 26px; font-size: 15.5px; }
+.sched-time { background: var(--green-soft); color: #3f5a3c; }
