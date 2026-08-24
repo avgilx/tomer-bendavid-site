@@ -1,0 +1,53 @@
+# ============================================================
+#  tomerbendavid.co.il — הגדרות שרת
+# ============================================================
+
+# --- דף שגיאה ---
+ErrorDocument 404 /index.html
+
+# --- כפיית HTTPS ו-www אחיד ---
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# --- הפניות מהכתובות של האתר הקודם (Base44) ---
+Redirect 301 /business/kung-fu           /kungfu-business.html
+Redirect 301 /business/yin-yang          /yin-yang.html
+Redirect 301 /business/custom            /custom-workshops.html
+Redirect 301 /business/executive-coaching /executive-coaching.html
+Redirect 301 /business                   /organizations.html
+
+Redirect 301 /private/retreats           /retreats.html
+Redirect 301 /private/personal-training  /personal-training.html
+Redirect 301 /private/teacher-training   /teacher-training.html
+Redirect 301 /private/qigong             /kung-fu.html
+Redirect 301 /private/kungfu-adults      /kung-fu.html
+Redirect 301 /private/kungfu-kids        /kung-fu.html
+Redirect 301 /private                    /individuals.html
+
+Redirect 301 /hung-gar                   /kung-fu.html
+Redirect 301 /about                      /about.html
+Redirect 301 /approach                   /about.html
+Redirect 301 /contact                    /contact.html
+Redirect 301 /media                      /index.html
+Redirect 301 /faq                        /index.html
+Redirect 301 /terms                      /index.html
+Redirect 301 /privacy                    /index.html
+Redirect 301 /accessibility              /index.html
+
+# --- דחיסה ---
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript image/svg+xml
+</IfModule>
+
+# --- מטמון לקבצים סטטיים ---
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 6 months"
+  ExpiresByType image/png  "access plus 6 months"
+  ExpiresByType text/css   "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+</IfModule>
