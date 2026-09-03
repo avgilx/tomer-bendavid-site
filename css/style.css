@@ -155,8 +155,12 @@ h1 { letter-spacing: -0.01em; }
 .page-hero h1 { font-size: clamp(27px, 4.2vw, 38px); }
 .page-hero .tagline { font-size: clamp(16px, 2.4vw, 18px); color: var(--accent); margin: 10px 0 0; }
 .page-hero .intro { font-size: 16.5px; color: var(--ink-soft); max-width: 700px; margin: 18px 0 0; }
-.back-link { display: inline-block; font-size: 15px; color: var(--accent); margin-bottom: 14px; }
-.back-link::before { content: "\2192\00a0"; unicode-bidi: isolate; }
+/* פירורי לחם — מסלול ברור חזרה לרשימת התחומים */
+.crumbs { font-size: 15px; color: var(--ink-faint); margin-bottom: 16px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.crumbs a { color: var(--accent); }
+.crumbs a:hover { color: var(--brown); text-decoration: underline; text-underline-offset: 3px; }
+.crumbs span[aria-hidden] { color: var(--ink-faint); opacity: 0.6; }
+.crumbs span[aria-current] { color: var(--ink-soft); }
 
 /* ---------- מקטעים ---------- */
 .section { padding: 68px 0; }
